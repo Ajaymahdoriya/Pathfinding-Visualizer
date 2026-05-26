@@ -60,29 +60,5 @@ npm start
 Contributions are welcome. Please open issues or pull requests to add features, fix bugs, or improve documentation.
 
 
-
-## Deploying on Vercel (static)
-
-This repository can be deployed as a static site on Vercel without running the Express server. I added a `vercel.json` to route all requests to `index.html`.
-
-Steps (recommended):
-
-1. Push this repository to GitHub (or another Git provider).
-2. In Vercel, choose "Import Project" and connect your Git repo. Select the project root and the "Other" framework preset.
-3. Ensure the build settings have no build command and that Vercel will serve the root files. The included `vercel.json` uses `@vercel/static` to serve `index.html` and everything under `public/`.
-
-Or use the CLI from the project root:
-
-```bash
-npm i -g vercel
-vercel login
-vercel --prod
-```
-
-When prompted, accept defaults and confirm the root is the project folder. Vercel will upload the static files and use `vercel.json` to serve the site.
-
-Note: If you want a server-backed deployment that runs `server.js`, you'll need to convert the Express app into Vercel serverless functions (place handlers under an `api/` folder) or use a platform that supports persistent Node servers.
-
 ---
 
-If you'd like, I can remove `server.js` from deployment or convert the server to Vercel serverless functions — tell me which option you prefer.
