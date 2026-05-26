@@ -86,4 +86,3 @@ Note: If you want a server-backed deployment that runs `server.js`, you'll need 
 ---
 
 If you'd like, I can remove `server.js` from deployment or convert the server to Vercel serverless functions — tell me which option you prefer.
-
